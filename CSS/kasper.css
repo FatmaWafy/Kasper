@@ -375,8 +375,13 @@ header nav .form i {
   display: flex;
   justify-content: center;
 }
-.portfolio .shuffle li {
+.portfolio .shuffle button {
   padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 8px;
 }
 .portfolio .shuffle .active {
   background-color: var(--main-color);
@@ -385,6 +390,8 @@ header nav .form i {
 .portfolio .imgs-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-top: 60px;
 }
 .portfolio .imgs-container .box {
@@ -430,7 +437,8 @@ header nav .form i {
 .portfolio .more {
   background-color: var(--main-color);
   color: white;
-  padding: 15px 20px;
+  border-radius: 5px;
+  padding: 10px 20px;
   width: fit-content;
   text-decoration: none;
   text-transform: uppercase;
