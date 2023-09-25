@@ -21,3 +21,37 @@ for (let i = 0; i < buttons.length; i++) {
     }
   });
 }
+
+let section2 = document.querySelector(".stats");
+let number = document.querySelectorAll(".stats .number");
+let started = false;
+
+let section = document.querySelector(".our-skills");
+let spans = document.querySelectorAll(".prog span");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= section2.offsetTop - 300) {
+    if (!started) {
+      number.forEach((num) => {
+        startcount(num);
+      });
+    }
+    started = true;
+  }
+
+  function startcount(el) {
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+      el.textContent++;
+      if (el.textContent == goal) {
+        clearInterval(count);
+      }
+    }, 100 / goal);
+  }
+
+  if (window.scrollY >= section2.offsetTop - 100) {
+    spans.forEach((span) => {
+      span.style.width = span.dataset.progress;
+    });
+  }
+});

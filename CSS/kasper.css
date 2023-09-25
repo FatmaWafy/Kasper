@@ -375,8 +375,13 @@ header nav .form i {
   display: flex;
   justify-content: center;
 }
-.portfolio .shuffle li {
+.portfolio .shuffle button {
   padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 8px;
 }
 .portfolio .shuffle .active {
   background-color: var(--main-color);
@@ -385,6 +390,8 @@ header nav .form i {
 .portfolio .imgs-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-top: 60px;
 }
 .portfolio .imgs-container .box {
@@ -651,18 +658,21 @@ header nav .form i {
 .our-skills .skills .prog-holder .prog {
   background-color: #dadedc;
   height: 30px;
+  border-radius: 10px;
 }
 .our-skills .skills .prog-holder .prog span {
   display: block;
   background-color: var(--main-color);
   height: 100%;
   position: relative;
+  transition: width 1s linear;
+  border-radius: 10px;
 }
 .our-skills .skills .prog-holder .prog span::before {
   position: absolute;
   content: attr(data-progress);
   background-color: black;
-  color: wheat;
+  color: white;
   top: -40px;
   padding: 4px 0;
   right: -18px;
